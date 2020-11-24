@@ -4,10 +4,10 @@
 
 ## Tasks
 
-1) [**Fork and clone**](https://git.generalassemb.ly/SEIR-Margaret/ForkAndClone) this repository into your `wXXdXX` directory
+1) [**Fork and clone**](https://git.generalassemb.ly/SEIR-Margaret/ForkAndClone) this repository into your `w05d02` directory
 
-2) **Do:** [this exercise template](homework)
+2) **Do:** [First Express Homework](first_express_homework.md)
 
 3) **Submit:** via GitHub issues. Follow the instructions found in the [wiki](https://git.generalassemb.ly/SEIR-Margaret/class-recordings-and-info/blob/master/submitting-homework.md).
 
-4) **Prepare for the next day:** [review your knowlege of templates](preparation.md)
+4) **Prepare for the next day:** [review Big O Notation](preparation.md)
