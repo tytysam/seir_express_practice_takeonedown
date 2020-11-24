@@ -1,20 +1,26 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly)
+![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) 
 
-#  WXXDXX Prepare For the Next Day
+# Big O Notation
 
-## Content Heading
+## Overview
+This lesson covers the basics of Big O notation.
 
-This is where you write an overview of the content. Soon we will be covering templates. Watch these videos and read these articles to learn about templates.
+There are two components to this lesson:
+1. [myGA module: Big O Notation](https://my.generalassemb.ly/activities/511)
+2. In-Class Exercise (We will do this together in our next class!)
 
-## Watch
-> Each video is roughly 4,294,967,295 minutes long
+## Learning Objectives
+By the end of this lesson, you'll be able to:
+- Explain how Big O notation is used to describe algorithms.
+- Define constant, linear, quadratic, logarithmic, and factorial Big O runtimes.
+- Analyze algorithms to determine their Big O runtime.
 
-- [A video about templates]()
-- [A video about templates]()
-- [A video about templates]()
+## Prerequisites
+* None
 
-## Read
+## Duration
+1.5 hours total:
+* 0.5 hour myGA
 
-- [An article about templates]()
-- [An article about templates]()
-- [An article about templates]()
+## Additional Resources
+- [The Big O Cheat Sheet](http://bigocheatsheet.com/) is the authority on Big O complexities.
