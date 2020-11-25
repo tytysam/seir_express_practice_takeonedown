@@ -75,6 +75,22 @@ app.get("/magic/:question", (req, res) => {
   <h1>...${randomResponse}</h1>`);
 });
 
+// TAKE ONE DOWN... - EXPRESS APP
+// Create a route with path of 'take_one' with a parameter of number_of_bottles...
+///////////////////////////////////////////////////////////////////////////////////////
+app.get("/takeOne/:numListens", (req, res) => {
+  const numberOfListens = parseInt(req.params.numListens);
+  const nextListen = numberOfListens + 1; // yes, purposely incrementing instead of decrementing | it's for the theme, yo
+
+  res.send(
+    `
+    <h1><a href="/takeOne/${nextListen}">${numberOfListens} Listens of Pink Floyd's the Wall</a></h1>
+    <br />
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iLFwTqdsuxw?start=19" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    `
+  );
+});
+
 // Tell the server where to listen for requests (specifically, the port)
 ///////////////////////////////////////////////////////////////////////////////////////
 app.listen(3000, () => {
