@@ -8,6 +8,7 @@ const app = express();
 
 // GREETINGS - EXPRESS APP
 // Create route with path of 'greeting' and a parameter of 'name'...
+///////////////////////////////////////////////////////////////////////////////////////
 app.get("/greeting/:name", (req, res) => {
   const name = req.params.name; // attach the parameter we pass through our route to a variable
 
@@ -17,14 +18,16 @@ app.get("/greeting/:name", (req, res) => {
 
 // TIP CALCULATOR - EXPRESS APP
 // Create a route with path of 'tip' with 2 parameters: 'total' and 'tipPercentage'...
+///////////////////////////////////////////////////////////////////////////////////////
 app.get("/tip/:total/:tipPercentage", (req, res) => {
-  const total = parseInt(req.params.total); // attach the first parameter we pass through our route to a variable
-  const tipNum = parseInt(req.params.tipPercentage); // attach the second parameter we pass through our route to a variable
-  const tipPercentage = tipNum / 100;
+  const total = parseInt(req.params.total); // convert parameter to an Integer, then attach to a variable
+  const tipNum = parseInt(req.params.tipPercentage); // convert parameter to an Integer, then attach to a variable
+  const tipPercentage = tipNum / 100; // convert Integer to a decimal, then attach to a new variable | so we can easily print the Int and use the Decimal for the math
 
   // Display how much your tip should be based on total * tipPercentage...
   const tipValue = total * tipPercentage; // tip = total cost * desired tip percentage
 
+  // Response
   res.send(
     `<h1 style="text-align: center">Since your total bill was: $${total} <br />
     <br />
@@ -35,7 +38,45 @@ app.get("/tip/:total/:tipPercentage", (req, res) => {
   );
 });
 
+// MAGIC 8-BALL - EXPRESS APP
+// Create a route with path of 'magic' with a parameter of a question (specifically, made to receive ==> 'Will%20I%20Be%20A%20Millionaire'... )
+///////////////////////////////////////////////////////////////////////////////////////
+const responses = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes definitely",
+  "You may rely on it",
+  "As I see it yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
+  "Reply hazy try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful",
+];
+
+app.get("/magic/:question", (req, res) => {
+  const question = req.params.question; // attach the parameter we pass through our route to a variable
+  const randomResponse =
+    responses[Math.floor(Math.random() * responses.length)]; // return a random index between 0 and 19
+
+  // Response
+  res.send(`
+  <h1>${question}???</h1>
+  <h1>...${randomResponse}</h1>`);
+});
+
 // Tell the server where to listen for requests (specifically, the port)
+///////////////////////////////////////////////////////////////////////////////////////
 app.listen(3000, () => {
   console.log("Listening on Port: 3000");
 });
